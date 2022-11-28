@@ -1,9 +1,9 @@
-import { Quiz } from './quiz.entity';
-import { QuestionRepository } from './question.repository';
-import { CreateQuestionDto } from './dto/create-question.dto';
+import { Quiz } from '../entities/quiz.entity';
+import { QuestionRepository } from '../repositories/question.repository';
+import { CreateQuestionDto } from '../dto/create-question.dto';
 import { Injectable } from "@nestjs/common";
 import { InjectRepository } from '@nestjs/typeorm';
-import { Question } from './question.entity';
+import { Question } from '../entities/question.entity';
 
 @Injectable()
 export class QuestionService {
