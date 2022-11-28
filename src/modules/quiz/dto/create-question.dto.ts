@@ -4,4 +4,7 @@ export class CreateQuestionDto {
     @IsNotEmpty({message:'Question Field is mandatory.'})
     @Length(3,255)
     question: string;
+
+    @IsNotEmpty()
+    quizId :number;
 }
