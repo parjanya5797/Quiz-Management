@@ -21,4 +21,8 @@ export class QuestionService {
 
         return newQuestion;
     }
+
+    async findQuestionById(id:number): Promise<Question> {
+        return await this.questionRepository.findOne(id,{relations:['quiz','options']})
+    }
 }

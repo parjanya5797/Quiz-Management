@@ -7,5 +7,6 @@ export const typeOrmConfig: TypeOrmModuleOptions = {
   password: "123456789",
   database: 'quiz-mgmt-nest',
   entities: [__dirname + '/../**/*.entity{.ts,.js}'],
-  synchronize: true
+  synchronize: true,
+  logging:true
 };

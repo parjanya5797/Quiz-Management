@@ -1,4 +1,4 @@
-import { QuizService } from '../quiz.service';
+import { QuizService } from '../services/quiz.service';
 import { QuestionService } from '../services/question.service';
 import { CreateQuestionDto } from '../dto/create-question.dto';
 import { Body, Controller, Post, UsePipes, ValidationPipe } from "@nestjs/common";
