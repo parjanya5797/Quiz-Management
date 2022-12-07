@@ -1,3 +1,4 @@
+import { User } from './user.entity';
 import { SETTINGS } from './../../app.utils';
 import { UserRegisterRequestDto } from './dto/user-register.req.dto';
 import { UserService } from './user.service';
@@ -9,8 +10,8 @@ export class UserController {
 
     @Post('/register')
     @UsePipes(SETTINGS.VALIDATION_PIPE)
-    doUserRegistration(@Body() userRegister: UserRegisterRequestDto) {
-        return this.userService.doUserRegistration(userRegister);
+   async doUserRegistration(@Body() userRegister: UserRegisterRequestDto): Promise<User>{
+        return await this.userService.doUserRegistration(userRegister);
     }
 
 }
