@@ -14,4 +14,8 @@ export class UserService {
         user.password = password;
        return await user.save();
     }
+
+    async getUserByEmail(email:string) {
+        return User.findOne({where:{email}});
+    }
 }
